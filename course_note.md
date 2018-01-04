@@ -27,3 +27,24 @@
   - Each mapper processes a portion of the input data, that's known as the input split. And by default, Hadoop would use a HDFS block as the input split for each mapper. It makes sure each mapper works on data on the same machine. 
   - If the task tracker could already been busy, in this case a different node would be chosen, and it would be streamed over the network.
   - Then the mapper passes the output to the reducer, then the reducer pass the final result back to HDFS. 
+
+
+## MapReduce Design Pattern
+
+### Overview of Patterns
+- Filtering patterns
+  - Sampling patterns
+  - Top N
+
+- Summerization patterns
+  - Counting 
+  - Min/Max
+  - Men/median/mode
+  - Index
+  
+- Structural patterns
+  - Combining data set
+  
+### Filtering patterns
+- Don't change the record in data. 
+- Bloom filter: efficient probabilistic filter
