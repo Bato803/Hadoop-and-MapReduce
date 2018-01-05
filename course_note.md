@@ -48,3 +48,12 @@
 ### Filtering patterns
 - Don't change the record in data. 
 - Bloom filter: efficient probabilistic filter
+
+### Summerization patterns
+- Inverted Index. 
+- Numerical summarization
+  - min/max
+  - count
+  - mean/medium/model
+  - first/last
+  
