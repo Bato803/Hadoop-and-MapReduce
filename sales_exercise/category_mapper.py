@@ -1,4 +1,4 @@
-
+# Count how many sales for each store - mapper
 
 import sys
 
