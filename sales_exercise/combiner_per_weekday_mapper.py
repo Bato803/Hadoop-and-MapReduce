@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
 """
-Count the average of sales per weekday. 
-
+Count the average of sales per weekday
+with combiner
 """
 
 
