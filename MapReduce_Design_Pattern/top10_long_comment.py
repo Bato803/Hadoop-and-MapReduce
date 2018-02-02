@@ -11,14 +11,12 @@ import csv
 def mapper():
     reader = csv.reader(sys.stdin, delimiter='\t')
     writer = csv.writer(sys.stdout, delimiter='\t', quotechar='"', quoting=csv.QUOTE_ALL)
-
-    all_lines = []
-    for line in reader:
-        all_lines.append(line)
     
-    top10 = sorted(all_lines, key=lambda x:len(x[4]), reverse=True)[:10]
+    all_lines = [line for line in reader]
+  
+    top10 = sorted(all_lines, key=lambda x:len(x[4]))[-10:]   
     
-    for top in top10[::-1]:
+    for top in top10:
         writer.writerow(top)
 
 
