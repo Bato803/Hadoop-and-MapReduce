@@ -180,6 +180,22 @@ A node, or an entire rack can fail at any given time. The connectivity of a rack
 MapReduce is a big data programming model that supports all the requirements of big data modeling we mentioned. It can model processing large data, split complications into different parallel tasks and make efficient use of large commodity clusters and distributed file systems. In addition, it abstracts out the details of parallelzation, full tolerance, data distribution, monitoring and load balancing.
 
 
+### Getting Started with Hadoop
+
+***What's in Hadoop ecosystem? ***
+
+1. They provide scalability to store large volume of data on commodity hardware. 
+2. Supported graceful recovery from crashes and hardware failures. 
+3. Handle different types of data. 
+4. Provided the ability to facilitate a shared environment. (It's important to allow multiple jobs to exeucate simultaneously)
+5. Open-source projects backed by a large community. 
+
+Three main part of Hadoop:
+1. MapReduce: a programming model for processing big data. 
+2. YARN: the scheduler and resource manager. 
+3. HDFS: The Hadoop distributed file system. 
+
+***Layers in the Ecosystem***
 
 
 
