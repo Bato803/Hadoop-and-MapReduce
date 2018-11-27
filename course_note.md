@@ -249,3 +249,38 @@ While MapReduce excels at independent batch tasks similar to our applications, t
 2. The MapReduce model requires that maps and reduces execute independently of each other. This greatly simplifies your job as a designer, since you do not have to deal with synchronization issues. However, it means that computations that do have dependencies, cannot be expressed with MapReduce.
 3. Finally, MapReduce does not return any results until the entire process is finished. It must read the entire input data set. This makes it unsuitable for interactive applications where the results must be presented to the user very quickly, expecting a return from the user.
 
+#### When to use Hadoop.
+
+When to use:
+1. Future anticipated data growth. 
+2. Long term availability of data. 
+3. Use multiple applications over the same data source. 
+4. High volume. 
+5. High variety. 
+
+When not to use:
+1. Small datasets. 
+2. Task level parallelism. Hadoop is good for data parallelism, which means execution of the same function on multiple modes across the elements of a dataset. But it's not good for simultaneous execution of many different functions on multiple nodes. 
+3. Advanced algorithms. 
+4. Replacement to infrastructure. 
+5. HDFS stores data in blocks of 64MB or larger, so you may have to read an entire file just to pick one data entry. So random access to data is difficult. 
+
+
+#### Cloud Computing: An important big data enabler
+Cloud = IT infrastructure & Applications on Rent over the Internet. 
+
+If we build in-house capabilities, we need to buy hardware that suits our requirements. These includes, but not limited to, networking hardware, storage disks, upgrading hardware when it becomes obsolete. 
+
+Similarily, software stacks are also complex. 
+
+As for cloud, you pay as you go. 
+1. That means a low capital investment. 
+2. Deploying your application on a server that is geographically closer to your client can give you fast service and happy customers.
+3. You don't need to have a five or ten year resource estimation plan.
+
+In summary, PROS:
+1. Focus on domain expertise for team members. 
+2. Excellent value proposition. 
+3. Scalability. 
+4. Resource management. 
+
