@@ -233,3 +233,19 @@ Essential gears in the YARN engine:
 
 ***Layer 2: MapReduce***
 
+MapReduce is a simple programming model for the Hadoop ecosystem. It relies on YARN to schedule and execuate parallel processing over the distributed file blocks in HDFS. 
+
+Traditional parallel programming requires expertise on a number of computing and system concepts. The MapReduce programming model greatly simplified running code in parallel. 
+
+1. Map = apply operation to all elements. 
+ - The first step in MapReduce is to run a map operation on each node. Note that map goes to each node containing a data block for the file, instead of the data moving to map. This is moving computation to data.It generates key-value pair in this step. 
+ - The second step: sort and shuffle. The key values, with the same word, are moved to the same node. In general, a node will have different words. 
+2. Reduce = summarize operation on elements. The reduce operation operate on the output from step 2, sort and shuffle, 
+and executes on these nodes to add values for key-value pairs with the same keys
+
+While MapReduce excels at independent batch tasks similar to our applications, there are certain kinds of tasks that you would not want to use MapReduce for.
+
+1. For example, if your data is frequently changing, MapReduce is slow since it reads the entire input data set each time.
+2. The MapReduce model requires that maps and reduces execute independently of each other. This greatly simplifies your job as a designer, since you do not have to deal with synchronization issues. However, it means that computations that do have dependencies, cannot be expressed with MapReduce.
+3. Finally, MapReduce does not return any results until the entire process is finished. It must read the entire input data set. This makes it unsuitable for interactive applications where the results must be presented to the user very quickly, expecting a return from the user.
+
