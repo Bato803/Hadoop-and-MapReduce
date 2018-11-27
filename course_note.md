@@ -284,3 +284,16 @@ In summary, PROS:
 3. Scalability. 
 4. Resource management. 
 
+
+#### Cloud Service Models: An Exploration of Choices. 
+Diffent level of services:
+
+1. IaaS = Infrastructure as a service. It't the bare minimum rental service. We need to install and maintain OS as well as the application software. The Amazon EC2 cloud is a good example for this model. 
+
+2. PaaS = Platform as a service. It's a model where a user is provided with an entire computing platform. This includes the operating system and the programming languages you need. It could extend to include the database of our choice, or even a web server. You need to develop and run our own application software on top of these layers. The Google APP engine and Microsoft Azure are two examples of this model. 
+
+3. SaaS, the software as a service model. It's the cloud service provider takes the responsibilities for the hardware  and software environment such as the operating system and the application software. This means we could work on using the application to solve the problem. 
+
+We need to understand security risk since our data lies in thrid party servers.  
+
+
