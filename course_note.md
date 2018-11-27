@@ -159,3 +159,32 @@ It includes scaling, transformation, feature selection, dimensionality reduction
 In summary, data preparation is a very important part of the data science process. In fact, this is where you will spend most of your time on any data science effort.
 
 It can be a tedious process, but it is a crucial step. Always remember, garbage in, garbage out. If you don't spend the time and effort to create good data for the analysis, you will not get good results no matter how sophisticated the analysis technique you're using is.
+
+### Basic Scalable Computing Concepts. 
+
+#### Scalable Computing over the Internet
+
+Simply put, a parallel computer is a very large number of single computing nodes with specialized capabilities connected to other network. For example, the Gordon Supercomputer here at The San Diego Supercomputer Center, has 1,024 compute nodes with 16 cores each equalling 16,384 compute cores in total.
+
+**Commodity clusters** are affordable parallel computers with an average number of computing nodes. They are not as powerful as traditional parallel computers and are often built out of less specialized nodes.
+
+In commodity clusters, the computing nodes are clustered in **racks** connected to each other via a fast network. Computing in one or more of these clusters across a local area network or the internet is called **distributed computing**. Such architectures enable what we call data-parallelism. In data-parallelism many jobs that share nothing can work on different data sets or parts of a data set.
+
+
+A node, or an entire rack can fail at any given time. The connectivity of a rack to the network can stop or the connections between individual nodes can break. It is not practical to restart everything every time, if failure happens. The ability to recover from such failures is called **Fault-tolerance**.
+
+**As a summary** the commodity clusters are a cost effective way of achieving data parallel scalability for big data applications. These type of systems have a higher potential for partial failures. It is this type of distributed computing that pushed for a change towards cost effective reliable and Fault-tolerant systems for management and analysis of big data.
+
+#### Programming model for Big Data
+
+MapReduce is a big data programming model that supports all the requirements of big data modeling we mentioned. It can model processing large data, split complications into different parallel tasks and make efficient use of large commodity clusters and distributed file systems. In addition, it abstracts out the details of parallelzation, full tolerance, data distribution, monitoring and load balancing.
+
+
+
+
+
+
+
+
+
+
