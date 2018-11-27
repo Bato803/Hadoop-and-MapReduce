@@ -182,7 +182,7 @@ MapReduce is a big data programming model that supports all the requirements of 
 
 ### Getting Started with Hadoop
 
-***What's in Hadoop ecosystem? ***
+***What's in Hadoop ecosystem?***
 
 1. They provide scalability to store large volume of data on commodity hardware. 
 2. Supported graceful recovery from crashes and hardware failures. 
@@ -197,10 +197,39 @@ Three main part of Hadoop:
 
 ***Layers in the Ecosystem***
 
+Low level: storage and scheduling. 
+High leve: Interactivity. 
 
+Layer 0: HDFS, the lowest level, it provides scalable storage and fault tolerance. 
+Layer 1: YARN, provide flexible scheduling and resource management over the HDFS storage. 
+Layer 2: MapReduce, a programming model that simplifies parallel computing. 
+Layer 3: Hive (dataflow scripting), Pig(SQL-like queries). It augments data modeling of MapReduce. 
 
+***Layer 0: HDFS***
+Key features: Scalability to large datasets, reliability to cope with hardware failures.
 
+1. It achieves scalability by partitioning or splitting large files across multiple computers. 
+2. By default, HDFS maintains three copies of every block (of file). 
+3. HDFS is also designed to handle a variety of data types.
 
+Key components: Namenode for metadata, DataNode for block storage. Usually one NameNode per cluster, one DataNode runs on each node in the cluster. 
 
+NameNode: Coordinates operations. It keeps track of file name, location in directory, etc. It also record mapping of contents on DataNode (which files are stored on which nodes.). 
 
+DataNode: Store the file blocks. It listens to commands from the name node for block creation, deletion, replication. 
+
+***Layer 1: YARN***
+It's a resource manager that sits just above the storage layer HDFS. 
+
+Adding YARN in between HDFS and the applications enabled new systems to be built, focusing on different types of big data applications such as Giraph for graph data analysis, Storm for streaming data analysis, and Spark for in-memory analysis.
+
+YARN does so by providing a standard framework that supports customized application development in the HADOOP ecosystem. 
+
+Essential gears in the YARN engine:
+1. Resource Manager. The resource manager controls all the resources, and decides who gets what.
+2. Application Master. It negotiates resource from the Resource Manager and it talks to Node Manager to get its tasks completed.
+3. Node Manager. Node manager operates at machine level and is in charge of a single machine.
+4. Container. 
+
+***Layer 2: MapReduce***
 
