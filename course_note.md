@@ -296,4 +296,5 @@ Diffent level of services:
 
 We need to understand security risk since our data lies in thrid party servers.  
 
+#### Value from Hadoop and Pre-built Hadoop Images
 
